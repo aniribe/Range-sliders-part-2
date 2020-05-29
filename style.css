@@ -9,7 +9,18 @@
 
 body {
   background: #444444;
-  margin: 2rem;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
 }
 
 input[type="range"] {
@@ -130,6 +141,22 @@ input[type="range"]::-webkit-slider-thumb {
     inset -1px -1px 1px 0.5rem rgb(19, 19, 19);
 }
 
+.slider-container2 .slider2::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(#0491fd, #0382e4, #0078d4) no-repeat content-box,
+    linear-gradient(rgb(56, 56, 56), rgb(31, 31, 31)) no-repeat border-box;
+  box-shadow: 0 0.125rem 0.25rem #000, inset 0 0.125rem 0.25rem rgb(63, 63, 63),
+    inset 0 -0.125rem 0.25rem rgb(12, 12, 12), inset 0 -0.25rem 0.25rem #111,
+    inset 0 -0.375rem 0.25rem #333, inset 0 0 0 0.312rem rgb(73, 73, 73),
+    inset 0 1px 1px 0.312rem rgb(19, 19, 19),
+    inset 0 1px 1px 0.512rem rgb(34, 34, 34),
+    inset -1px -1px 1px 0.5rem rgb(19, 19, 19);
+}
+
 /** Slider 3
 ***************/
 .slider-container3 {
@@ -169,6 +196,27 @@ input[type="range"]::-webkit-slider-thumb {
     1px 2px 15px rgba(46, 46, 46, 0.6);
 }
 
+.slider-container3 .slider3::-moz-range-thumb {
+  width: 2.8rem;
+  height: 2.8rem;
+  background: linear-gradient(#ffca44, #f8bb21, #ffb903);
+  border-radius: 50%;
+  border: none;
+  transform: rotate(45deg);
+  box-shadow: 0 1px 8px 5px rgba(46, 46, 46, 0.7),
+    1px 2px 15px rgba(46, 46, 46, 0.8), 5px 8px 10px -6px rgba(32, 32, 32, 0.7);
+  transition: border-radius 0.5s ease-in-out;
+}
+
+.slider-container3 .slider3::-moz-range-thumb:hover {
+  border-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  box-shadow: 0 1px 8px 5px rgba(46, 46, 46, 0.6),
+    1px 2px 15px rgba(46, 46, 46, 0.6);
+}
+
 .slider-container3 .output {
   position: relative;
   display: inline-block;
@@ -193,10 +241,14 @@ input[type="range"]::-webkit-slider-thumb {
   height: 2.5rem;
   border-radius: 2rem;
   box-shadow: 1px 1px 1px rgb(100, 100, 100), -1px -1px 1px rgb(80, 80, 80),
-    inset 3px 3px 8px #0e0e0e, inset -1px 2px 2px #1d1d1d,
+    inset 1px 6px 18px #111111, inset -1px 2px 2px #1d1d1d,
     inset 1px -2px 1px #202020, inset 6px 6px 28px rgb(43, 43, 43, 0.8),
-    inset -0.6rem -1rem 30px rgba(46, 46, 46, 0.8);
-  background: linear-gradient(rgb(19, 19, 19), rgb(54, 54, 54));
+    inset -0.6rem -1rem 25px rgba(31, 31, 31, 0.8);
+  background: linear-gradient(
+    rgb(19, 19, 19) 10%,
+    rgb(46, 46, 46) 30%,
+    rgb(39, 39, 39) 60%
+  );
 }
 
 .slider-container4 .slider4 {
@@ -223,6 +275,20 @@ input[type="range"]::-webkit-slider-thumb {
   width: 1.9rem;
   height: 1.9rem;
   border-radius: 50%;
+  background: radial-gradient(
+    circle at top left,
+    rgb(255, 8, 8) 30%,
+    rgb(151, 4, 4) 65%
+  );
+  box-shadow: 0 0 10px rgb(20, 20, 20, 0.9), 2px 6px 10px -5px rgb(7, 7, 7),
+    inset -1px -2px 7px rgb(22, 22, 22), 4px -6px 4px -5px rgb(34, 34, 34);
+}
+
+.slider-container4 .slider4::-moz-range-thumb {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  border: none;
   background: radial-gradient(
     circle at top left,
     rgb(255, 8, 8) 30%,
